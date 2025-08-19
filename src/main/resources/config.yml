@@ -1,0 +1,30 @@
+# ShowHeart Config
+enabled: true
+debug: true
+
+# Basic Settings
+alerts:
+  enabled: true
+  console: true
+
+
+checks:
+  speed:
+    enabled: true
+    threshold: 0.5
+  velocity:
+    enabled: true
+  reach:
+    enabled: true
+    threshold: 3.0
+  killaura:
+    enabled: true
+  fly:
+    enabled: true
+  autoclicker:
+    enabled: true
+    minimum: 10.0
+  scaffold:
+    enabled: true
+
+
