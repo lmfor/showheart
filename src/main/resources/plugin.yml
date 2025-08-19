@@ -1,0 +1,36 @@
+name: ShowHeart
+version: '${project.version}'
+main: com.lmfor.github.showHeart.ShowHeart
+description: Advanced anti-cheat detection system for 1.8.9
+author: lmfor
+website: https://github.com/lmfor
+
+load: STARTUP
+
+commands:
+  showheart:
+    description: Main anti-cheat command
+    aliases: [sh, anticheat]
+    permission: showheart.admin
+    usage: /<command> <reload|info|alerts>
+
+permissions:
+  showheart.*:
+    description: All ShowHeart permissions
+    default: op
+    children:
+      showheart.admin: true
+      showheart.alerts: true
+      showheart.bypass: true
+
+  showheart.admin:
+    description: Full anti-cheat administration
+    default: op
+
+  showheart.alerts:
+    description: Receive anti-cheat alerts
+    default: op
+
+  showheart.bypass:
+    description: Bypass anti-cheat checks
+    default: false
